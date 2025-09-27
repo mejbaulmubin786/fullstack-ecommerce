@@ -1,22 +1,20 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import Search from '../Search';
-
-import Badge from '@mui/material/Badge';
+import Badge, { BadgeProps } from '@mui/material/Badge';
 import { styled } from '@mui/material/styles';
-import IconButton from '@mui/material/IconButton';
-import { MdOutlineShoppingCart } from "react-icons/md";
+//import IconButton from '@mui/material/IconButton';
+//import { MdOutlineShoppingCart } from "react-icons/md";
 
 
-const StyledBadge = styled(Badge) (({ theme }) => ({
-    '& .MuiBadge-badge': {
-        right: -3,
-        top: 13,
-        border: `2px solid ${theme.palette.background.paper}`,
-        padding: '0 4px',
-    },
-}));
-
+// const StyledBadge = styled(Badge) < BadgeProps > (({ theme }) => ({
+//     '& .MuiBadge-badge': {
+//         right: -3,
+//         top: 13,
+//         border: `2px solid ${theme.palette.background.paper}`,
+//         padding: '0 4px',
+//     },
+// }));
 
 
 const Header = () => {
@@ -55,13 +53,13 @@ const Header = () => {
                             <li className='list-none'>
                                 <Link to='/login' className='link transition text-[15px] font-[500]'>Login</Link> | <Link to='/register' className='link transition text-[15px] font-[500]'>Register</Link>
                             </li>
-                            <li>
+                            {/* <li>
                                 <IconButton aria-label="cart">
                                     <StyledBadge badgeContent={4} color="secondary">
                                         <MdOutlineShoppingCart />
                                     </StyledBadge>
                                 </IconButton>
-                            </li>
+                            </li> */}
                         </ul>
                     </div>
                 </div>
