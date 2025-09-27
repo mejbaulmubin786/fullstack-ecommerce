@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import Search from '../Search';
 
+
 const Header = () => {
     return (
         <header>
@@ -19,7 +20,7 @@ const Header = () => {
                                 <li className='list-none'>
                                     <Link to='/order-traking' className='text-[12px] link transition'>Order Traking</Link>
                                 </li>
-                                
+
                             </ul>
                         </div>
                     </div>
@@ -28,12 +29,18 @@ const Header = () => {
             <div className="header py-3">
                 <div className="container flex items-center justify-between">
                     <div className="col1 w-[25%]">
-                        <Link to={'/'}><img src="/logo.jpg"/></Link>
+                        <Link to={'/'}><img src="/logo.jpg" /></Link>
                     </div>
-                <div className="col2 w-[45%]">
-                    <Search />
-                </div>
-                <div className="col3 w-[30%]"></div>
+                    <div className="col2 w-[45%]">
+                        <Search />
+                    </div>
+                    <div className="col3 w-[30%] flex items-center">
+                        <ul className="flex items-center gap-3">
+                            <li className='list-none'>
+                                <Link to='/login'>Login</Link> | <Link to='/register'>Register</Link>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </header>
