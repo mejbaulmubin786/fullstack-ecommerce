@@ -6,6 +6,8 @@ import Badge from '@mui/material/Badge';
 import { styled } from '@mui/material/styles';
 import IconButton from '@mui/material/IconButton';
 import { MdOutlineShoppingCart } from "react-icons/md";
+import { IoGitCompareSharp } from "react-icons/io5";
+import { FaRegHeart } from "react-icons/fa6";
 
 
 const StyledBadge = styled(Badge) (({ theme }) => ({
@@ -54,6 +56,20 @@ const Header = () => {
                         <ul className="flex items-center gap-3">
                             <li className='list-none'>
                                 <Link to='/login' className='link transition text-[15px] font-[500]'>Login</Link> | <Link to='/register' className='link transition text-[15px] font-[500]'>Register</Link>
+                            </li>
+                            <li>
+                                <IconButton aria-label="cart">
+                                    <StyledBadge badgeContent={4} color="secondary">
+                                        <IoGitCompareSharp />
+                                    </StyledBadge>
+                                </IconButton>
+                            </li>
+                            <li>
+                                <IconButton aria-label="cart">
+                                    <StyledBadge badgeContent={4} color="secondary">
+                                        <FaRegHeart />
+                                    </StyledBadge>
+                                </IconButton>
                             </li>
                             <li>
                                 <IconButton aria-label="cart">
