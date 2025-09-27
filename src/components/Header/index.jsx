@@ -53,7 +53,7 @@ const Header = () => {
                         <Search />
                     </div>
                     <div className="col3 w-[30%] flex items-center pl-7">
-                        <ul className="flex items-center gap-3">
+                        <ul className="flex items-center justify-end gap-3 w-full">
                             <li className='list-none'>
                                 <Link to='/login' className='link transition text-[15px] font-[500]'>Login</Link> | <Link to='/register' className='link transition text-[15px] font-[500]'>Register</Link>
                             </li>
