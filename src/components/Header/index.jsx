@@ -8,9 +8,10 @@ import IconButton from '@mui/material/IconButton';
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { IoGitCompareSharp } from "react-icons/io5";
 import { FaRegHeart } from "react-icons/fa6";
+import Tooltip from '@mui/material/Tooltip';
 
 
-const StyledBadge = styled(Badge) (({ theme }) => ({
+const StyledBadge = styled(Badge)(({ theme }) => ({
     '& .MuiBadge-badge': {
         right: -3,
         top: 13,
@@ -58,25 +59,31 @@ const Header = () => {
                                 <Link to='/login' className='link transition text-[15px] font-[500]'>Login</Link> | <Link to='/register' className='link transition text-[15px] font-[500]'>Register</Link>
                             </li>
                             <li>
-                                <IconButton aria-label="cart">
-                                    <StyledBadge badgeContent={4} color="secondary">
-                                        <IoGitCompareSharp />
-                                    </StyledBadge>
-                                </IconButton>
+                                <Tooltip title="Compare">
+                                    <IconButton aria-label="compare">
+                                        <StyledBadge badgeContent={4} color="secondary">
+                                            <IoGitCompareSharp />
+                                        </StyledBadge>
+                                    </IconButton>
+                                </Tooltip>
                             </li>
                             <li>
-                                <IconButton aria-label="cart">
-                                    <StyledBadge badgeContent={4} color="secondary">
-                                        <FaRegHeart />
-                                    </StyledBadge>
-                                </IconButton>
+                                <Tooltip title="Love">
+                                    <IconButton aria-label="Love">
+                                        <StyledBadge badgeContent={4} color="secondary">
+                                            <FaRegHeart />
+                                        </StyledBadge>
+                                    </IconButton>
+                                </Tooltip>
                             </li>
                             <li>
-                                <IconButton aria-label="cart">
-                                    <StyledBadge badgeContent={4} color="secondary">
-                                        <MdOutlineShoppingCart />
-                                    </StyledBadge>
-                                </IconButton>
+                                <Tooltip title="Cart">
+                                    <IconButton aria-label="cart">
+                                        <StyledBadge badgeContent={4} color="secondary">
+                                            <MdOutlineShoppingCart />
+                                        </StyledBadge>
+                                    </IconButton>
+                                </Tooltip>
                             </li>
                         </ul>
                     </div>
