@@ -34,10 +34,10 @@ const Header = () => {
                     <div className="col2 w-[45%]">
                         <Search />
                     </div>
-                    <div className="col3 w-[30%] flex items-center">
+                    <div className="col3 w-[30%] flex items-center pl-7">
                         <ul className="flex items-center gap-3">
                             <li className='list-none'>
-                                <Link to='/login'>Login</Link> | <Link to='/register'>Register</Link>
+                                <Link to='/login' className='link transition text-[15px] font-[500]'>Login</Link> | <Link to='/register' className='link transition text-[15px] font-[500]'>Register</Link>
                             </li>
                         </ul>
                     </div>
