@@ -2,28 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  background: #f5f0f0;
+    font-optical-sizing: auto;
+    background: #f5f0f0 !important;
+    color: rgba(0, 0, 0, 0.7);
 }
 
 .container {
-    width: 90%;
+    width: 95%;
     margin: auto;
 }
 
 
-.link:hover{
+.link:hover {
     color: #ff5252;
 }
 
-.MuiBadge-badge{
+.MuiBadge-badge {
     background-color: #ff5252 !important;
+}
+
+nav .button {
+    color: black;
+    
+}
+
+.MuiTouchRipple-root {
+    text-transform: capitalize !important;
+    font-weight: 500 !important;
+}
+
+nav .button:hover {
+    color: #ff5252;
+    font-weight: 500;
 }
