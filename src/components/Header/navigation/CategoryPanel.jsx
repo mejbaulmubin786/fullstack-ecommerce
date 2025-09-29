@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react'
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import Button from '@mui/material/Button';
@@ -9,22 +9,23 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 
-const CategoryPanel = (props) => {
-  const [open, setOpen] = React.useState(false);
+
+
+const CategoryPanel = () => {
+  const [open, setOpen] = useState(false);
 
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
   };
-
-  const DrawerList = (
+ const DrawerList = (
     <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
       <List>
         {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
-              
-                {/*------------------*/}
-              
+              {/* <ListItemIcon>
+                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              </ListItemIcon> */}
               <ListItemText primary={text} />
             </ListItemButton>
           </ListItem>
@@ -35,7 +36,9 @@ const CategoryPanel = (props) => {
         {['All mail', 'Trash', 'Spam'].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
-              {/*--------------*/}
+              {/* <ListItemIcon>
+                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              </ListItemIcon> */}
               <ListItemText primary={text} />
             </ListItemButton>
           </ListItem>
@@ -44,13 +47,15 @@ const CategoryPanel = (props) => {
     </Box>
   );
 
+
   return (
-    <div>
+    <>
       <Button onClick={toggleDrawer(true)}>Open drawer</Button>
       <Drawer open={open} onClose={toggleDrawer(false)}>
         {DrawerList}
       </Drawer>
-    </div>
-  );
+    </>
+  )
 }
+
 export default CategoryPanel
